@@ -33,3 +33,7 @@ nav ul li{
     outline: 0;
    
 }
+.dark-nav{
+    background: #212EA0;
+    transition: 0.5s;
+}
