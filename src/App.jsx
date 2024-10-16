@@ -3,6 +3,7 @@ import Navbar from './Navbar';
 import Hero from './Hero'; 
 import Program from './Program';
 import Title from './Title';
+import About from './About';
 
 
 function App() {
@@ -13,7 +14,7 @@ function App() {
       <div className='container'>
           <Title subtitle='Our Program' title= 'What We Offer'/>
           <Program/>
-       
+          <About/>
       </div>
       
     </div>
