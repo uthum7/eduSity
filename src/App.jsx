@@ -6,6 +6,8 @@ import Title from './Title';
 import About from './About';
 import Campus from './Campus';
 import Testimonial from './Testimonial';
+import Contacts from './Contacts';
+import Footer from './Footer';
 
 
 function App() {
@@ -19,7 +21,11 @@ function App() {
           <About/>
           <Title subtitle='Gallery' title= 'Campus Photos'/>
           <Campus/>
+          <Title subtitle='TESTIMONIALS' title= 'What Student Says'/>
           <Testimonial/>
+          <Title subtitle='Contact Us' title= 'Get In Touch'/>
+          <Contacts/>
+          <Footer/>
       </div>
       
     </div>
