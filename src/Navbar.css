@@ -1,3 +1,4 @@
+/* Base styles for the navbar */
 .navbar {
     width: 100%;
     background: transparent; /* Start with a transparent background */
@@ -9,7 +10,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    z-index: 10;
+    z-index: 10; /* Ensure navbar is above other elements */
     transition: background 0.5s ease-in-out; /* Smooth transition */
 }
 
@@ -17,9 +18,13 @@
     width: 180px;
 }
 
+nav ul {
+    display: flex; /* Use flexbox for layout */
+    list-style: none;
+}
+
 nav ul li {
     display: inline-block;
-    list-style: none;
     margin: 5px 20px;
     font-size: 16px;
 }
@@ -29,6 +34,7 @@ nav ul li {
     background: #212EA0; /* Solid blue background */
 }
 
+/* Styles for the buttons */
 .btn {
     background: #FFF;
     color: #212121;
@@ -38,4 +44,48 @@ nav ul li {
     cursor: pointer;
     border: 0;
     outline: 0;
+}
+
+.menu-icon {
+    display: none; /* Hide mobile menu icon by default */
+}
+
+/* Media Query for larger screens */
+@media(max-width: 1000px) {
+    .logo {
+        width: 140px;
+    }
+    nav ul li {
+        margin: 10px 15px;
+    }
+}
+
+/* Media Query for mobile screens */
+@media(max-width: 840px) {
+    nav {
+        padding: 15px 0;
+    }
+    nav ul {
+        position: fixed;
+        top: 0;
+        right: -200px; /* Start off-screen */
+        bottom: 0;
+        background: #212EA0; /* Background for mobile menu */
+        z-index: 10; /* Make sure it overlays correctly */
+        width: 200px;
+        padding-top: 70px;
+        transition: right 0.5s; /* Smooth transition */
+    }
+    nav ul li {
+        display: block; 
+        margin: 25px 40px; 
+    }
+    .menu-icon {
+        display: block; /* Show menu icon on mobile */
+        width: 30px;
+        cursor: pointer;
+    }
+    .hide-mobile-menu {
+        right: -200px; /* Hide menu off-screen */
+    }
 }
